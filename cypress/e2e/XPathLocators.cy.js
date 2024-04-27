@@ -1,0 +1,25 @@
+describe('XPathLocators', () => {
+    it('login positive', () => {
+        cy.visit("https://opensource-demo.orangehrmlive.com/")
+        var usernameField =  cy.xpath('//*[@name="username"]')
+        var passwordField =  cy.xpath('//*[@name="password"]')
+        var submitButton =  cy.xpath('//*[@type="submit"]')    
+        usernameField.type('Admin')
+        passwordField.type('admin123')
+        submitButton.click()
+        var profileName =  cy.xpath('//*[@class="oxd-userdropdown-name"]')    
+        profileName.should('be.visible')
+        
+    })
+    it('login negative', () => {
+        cy.visit("https://opensource-demo.orangehrmlive.com/")
+        var usernameField =  cy.xpath('//*[@name="username"]')
+        var passwordField =  cy.xpath('//*[@name="password"]')
+        var submitButton =  cy.xpath('//*[@type="submit"]')
+        usernameField.type('Admin')
+        passwordField.type('admin')
+        submitButton.click()
+        var loginInvalidoAlert =  cy.xpath('//*[@class="oxd-alert-content oxd-alert-content--error"]')
+        loginInvalidoAlert.should('be.visible')
+    })
+})

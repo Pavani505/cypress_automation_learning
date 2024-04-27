@@ -36,3 +36,22 @@ then you will select the browser you want (chromes in that case)
 # -----------------------------------------------------------------------------
 
 # How to work with cypress
+
+Commands to execute cypress:
+
+To open Cypress Runner
+ npx cypress open
+
+To Run All the specs under e2e folder
+ npx cypress run
+ npx cypress run --headed
+
+To Run Single spec under e2e folder
+ npx cypress run –-spec cypress\e2e\MyTest.js"
+
+
+To Run All the specs under e2e folder using Chrome
+ npx cypress run --browser chrome
+ npx cypress run --browser edge
+
+ npx cypress run --browser edge --headed
