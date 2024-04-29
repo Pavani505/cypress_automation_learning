@@ -1,17 +1,17 @@
-import LoginModules from './modules/loginSupport.js/loginModule';
+import LoginModule from './modules/loginSupport.js/loginModule';
 
 describe('LoginPage Tests using Modular Approach', () => {
   beforeEach(() => {
-    LoginModules.visitLoginPage();
+    LoginModule.visitLoginPage();
   });
 
   it('should login successfully with valid credentials', () => {
-    LoginModules.loginWithCredentials('Admin', 'admin123');
-    LoginModules.verifySuccessfulLogin();
+    LoginModule.loginWithCredentials('Admin', 'admin123');
+    LoginModule.verifySuccessfulLogin();
   });
 
   it('should show error message for invalid credentials', () => {
-    LoginModules.loginWithCredentials('Admin', 'admin');
-    LoginModules.verifyFailedLogin();
+    LoginModule.loginWithCredentials('Admin', 'admin');
+    LoginModule.verifyFailedLogin();
   });
 });

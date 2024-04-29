@@ -1,6 +1,6 @@
 import LoginPage from './loginPage';
 
-class LoginModules {
+class LoginModule {
   visitLoginPage() {
     cy.visit('https://opensource-demo.orangehrmlive.com/');
   }
@@ -20,4 +20,4 @@ class LoginModules {
   }
 }
 
-export default new LoginModules();
+export default new LoginModule();
