@@ -1,4 +1,4 @@
-import LoginPage from './loginPage';
+import LoginPage from '../pages/loginPage';
 
 class LoginModule {
   visitLoginPage() {
