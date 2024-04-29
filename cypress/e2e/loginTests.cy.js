@@ -1,4 +1,4 @@
-import LoginModule from './modules/loginSupport.js/loginModule';
+import LoginModule from './modules/loginModule';
 
 describe('LoginPage Tests using Modular Approach', () => {
   beforeEach(() => {
