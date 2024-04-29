@@ -24,5 +24,14 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('pickElement', (element) => {
+    if (element.includes('//')) {
+        return cy.xpath(element);
+    } else { 
+        return cy.get(element);
+    }
+});
+
+
 /// <reference types="Cypress" />
 /// <reference types="cypress-xpath" />

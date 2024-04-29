@@ -1,10 +1,10 @@
 class LoginPage {
     constructor() {
-      this.usernameField = '//*[@name="username"]';
-      this.passwordField = '//*[@name="password"]';
-      this.submitButton = '//*[@type="submit"]';
-      this.profileName = '//*[@class="oxd-userdropdown-name"]';
-      this.loginInvalidoAlert = '//*[contains(@class, "oxd-alert-content") and contains(@class, "oxd-alert-content--error")]';
+      this.usernameField = '//*[@name="username"]'; // xpath
+      this.passwordField = '//*[@name="password"]'; // xpath
+      this.submitButton = '//*[@type="submit"]';    // xpath
+      this.profileName = ".oxd-userdropdown-name";  // css
+      this.loginInvalidoAlert = '//*[contains(@class, "oxd-alert-content") and contains(@class, "oxd-alert-content--error")]'; // xpath
     }
   
   }
