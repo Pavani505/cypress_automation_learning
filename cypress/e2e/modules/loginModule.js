@@ -6,17 +6,17 @@ class LoginModule {
   }
 
   loginWithCredentials(username, password) {
-    cy.get(LoginPage.usernameField).type(username);
-    cy.get(LoginPage.passwordField).type(password);
-    cy.get(LoginPage.submitButton).click();
+    cy.xpath(LoginPage.usernameField).type(username);
+    cy.xpath(LoginPage.passwordField).type(password);
+    cy.xpath(LoginPage.submitButton).click();
   }
 
   verifySuccessfulLogin() {
-    cy.get(LoginPage.profileName).should('be.visible');
+    cy.xpath(LoginPage.profileName).should('be.visible');
   }
 
   verifyFailedLogin() {
-    cy.get(LoginPage.loginInvalidoAlert).should('be.visible');
+    cy.xpath(LoginPage.loginInvalidoAlert).should('be.visible');
   }
 }
 
